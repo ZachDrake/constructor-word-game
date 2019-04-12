@@ -1,20 +1,22 @@
-function Letter(letter, guess) {
+function Letter(letter) {
     this.letter = letter;
-    this.guess = guess;
-    this.toString = function() {
+    this.guess = false;
+    this.toString = function () {
         if (this.guess === false) {
             return "_";
-        }else {
-            return this.letter;
+        } else {
+            return this.letter;         
         }
     }
-    this.letterCheck = function(check) {
-        if(this.letter === check) {
+    this.letterCheck = function (check) {
+        check = "a";
+        if (this.letter === check) {
             this.guess = true;
+        } else {
+            this.guess = false;
         }
     }
 }
-var a = new Letter("a", false);
-console.log(a.toString());
+
 
 module.exports = Letter;
