@@ -16,7 +16,7 @@ function Word(word) {
         console.log("--------------");
     };
 
-    this.userGuess = function(inpput) {
+    this.userGuess = function(input) {
         for(var i = 0; i < this.temp.length; i++){
             this.temp[i].letterCheck(input);
         }

@@ -18,6 +18,9 @@ var correctLetters = [];
 
 var remainingGuesses = 10;
 
+console.log("The Office Themed Word Guess Game!\n\n")
+
+
 function main() {
     if (requireNewWord) {
         var random = Math.floor(Math.random() * theOffice.length);
@@ -82,6 +85,7 @@ function main() {
             });
     } else {
         console.log("You win!\n");
+        restartGame();
     }
 
     function completeCheck(key) {
