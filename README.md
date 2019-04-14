@@ -6,5 +6,7 @@ Letter.js: Contains a constructor, Letter. This constructor should be able to ei
 Word.js: Contains a constructor, Word that depends on the Letter constructor. This is used to create an object representing the current word the user is attempting to guess.
 Index.js: The file containing the logic for the course of the game, which depends on Word.js.
 
+demo gif: https://github.com/ZachDrake/constructor-word-game/blob/master/constructor_word_game.gif
+
 Problems I will have to address:
 -The word does not display until after the user's first guess. 
