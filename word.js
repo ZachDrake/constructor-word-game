@@ -6,8 +6,22 @@ function Word(word) {
         var letter = new Letter(word[i]);
         this.temp.push(letter);
     }
-    console.log(this.temp);
+    
+    this.display = function() {
+        var answer = "";
+        for(var i = 0; i < this.temp.length; i++){
+            answer += this.temp[i] + " ";
+        }
+        console.log(answer);
+        console.log("--------------");
+    };
+
+    this.userGuess = function(inpput) {
+        for(var i = 0; i < this.temp.length; i++){
+            this.temp[i].letterCheck(input);
+        }
+    };
 }
 
-var test = new Word("test");
+module.exports = Word;
 

@@ -2,18 +2,17 @@ function Letter(letter) {
     this.letter = letter;
     this.guess = false;
     this.toString = function () {
-        if (this.guess === false) {
-            return "_";
-        } else {
-            return this.letter;         
-        }
+       if(this.letter === " "){
+           this.guess = true;
+       } else if (this.guess === false){
+           return "_";
+       } else {
+           return this.letter;
+       }
     }
     this.letterCheck = function (check) {
-        check = "a";
-        if (this.letter === check) {
+        if (check === this.letter) {
             this.guess = true;
-        } else {
-            this.guess = false;
         }
     }
 }
